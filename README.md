@@ -15,7 +15,7 @@ Just do this:
 import nuke
 import setWindowMainWindow
 menu = nuke.menu("Nuke")
-nuke_menu = menu.addMenu("Fatih")
+nuke_menu = menu.addMenu("Fatih") #Change "Fatih" with your menu name if you want.
 ```
     
 If you have existing **"init.py"** file please open it and put the following codes. So, there is no **"init.py"** file please copy and past into **".nuke"** folder directly. :
