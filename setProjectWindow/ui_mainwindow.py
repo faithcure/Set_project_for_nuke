@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
 
-################################################################################
-## Form generated from reading UI file 'setProjectMainWindowOooCpU.ui'
-##
-## Created by: Qt User Interface Compiler version 5.15.2
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
+
 
 from PySide2.QtCore import *
 from PySide2.QtGui import *
@@ -137,7 +131,7 @@ class Ui_setProjectWindow(object):
 
         self.colorspaceComboBox = QComboBox(self.groupBox)
         self.colorspaceComboBox.setObjectName(u"colorspaceComboBox")
-        self.colorspaceComboBox.setEnabled(True)
+        self.colorspaceComboBox.setEnabled(False)
 
         self.horizontalLayout_8.addWidget(self.colorspaceComboBox)
 
@@ -359,6 +353,11 @@ class Ui_setProjectWindow(object):
 
         self.verticalLayout_3.addWidget(self.label_3)
 
+        self.label_6 = QLabel(self.createAutoProjectTab)
+        self.label_6.setObjectName(u"label_6")
+
+        self.verticalLayout_3.addWidget(self.label_6)
+
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer)
@@ -380,6 +379,13 @@ class Ui_setProjectWindow(object):
         self.label.setObjectName(u"label")
 
         self.verticalLayout_11.addWidget(self.label)
+
+        self.line_2 = QFrame(self.groupBox_3)
+        self.line_2.setObjectName(u"line_2")
+        self.line_2.setFrameShape(QFrame.HLine)
+        self.line_2.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_11.addWidget(self.line_2)
 
         self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -420,7 +426,7 @@ class Ui_setProjectWindow(object):
         self.retranslateUi(setProjectWindow)
         self.cancelProjectButton.clicked.connect(setProjectWindow.close)
 
-        self.set_project_main_tab.setCurrentIndex(1)
+        self.set_project_main_tab.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(setProjectWindow)
@@ -440,7 +446,7 @@ class Ui_setProjectWindow(object):
         self.startAtLabelA.setText(QCoreApplication.translate("setProjectWindow", u"Start at: ", None))
         self.startAtInputA.setText(QCoreApplication.translate("setProjectWindow", u"Start at input", None))
         self.colorSpaceLabel.setText(QCoreApplication.translate("setProjectWindow", u"Colorspace:", None))
-        self.label_2.setText(QCoreApplication.translate("setProjectWindow", u"<html><head/><body><p>In this tab you can set the all settings from selected read node.</p><p>Just one selection change to Colorspace if you want.</p></body></html>", None))
+        self.label_2.setText(QCoreApplication.translate("setProjectWindow", u"<html><head/><body><p>In this tab you can set the all settings from selected read node.</p></body></html>", None))
         self.set_project_main_tab.setTabText(self.set_project_main_tab.indexOf(self.createManualProjectTab), QCoreApplication.translate("setProjectWindow", u"Auto Set Project", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("setProjectWindow", u"Input Specific Options", None))
         self.plateNameLabel_2.setText(QCoreApplication.translate("setProjectWindow", u"Plate Name:", None))
@@ -472,9 +478,10 @@ class Ui_setProjectWindow(object):
         self.frameRangeLabel_3.setText(QCoreApplication.translate("setProjectWindow", u"Format:", None))
         self.colorSpaceLabel_2.setText(QCoreApplication.translate("setProjectWindow", u"Colorspace:", None))
         self.label_3.setText(QCoreApplication.translate("setProjectWindow", u"Set all settings manually. ", None))
+        self.label_6.setText(QCoreApplication.translate("setProjectWindow", u"Empty sections means default settings.", None))
         self.set_project_main_tab.setTabText(self.set_project_main_tab.indexOf(self.createAutoProjectTab), QCoreApplication.translate("setProjectWindow", u"Manual Set Project", None))
         self.groupBox_3.setTitle(QCoreApplication.translate("setProjectWindow", u"Content", None))
-        self.label.setText(QCoreApplication.translate("setProjectWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">For more information:</span></p><p>www.fatihunal.net/setproject (How to use tihs script)</p><p>fatihunal1989@gmail.com</p><p>www.fatihunal.net</p><p><br/></p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("setProjectWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">For more information:</span></p><p>www.fatihunal.net</p><p>fatihunal1989@gmail.com</p><p>github.com/faithcure</p></body></html>", None))
         self.set_project_main_tab.setTabText(self.set_project_main_tab.indexOf(self.infoProjectTab), QCoreApplication.translate("setProjectWindow", u"About", None))
         self.pushButton.setText(QCoreApplication.translate("setProjectWindow", u"Set Project", None))
         self.cancelProjectButton.setText(QCoreApplication.translate("setProjectWindow", u"Close", None))
