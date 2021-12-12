@@ -132,23 +132,30 @@ class mainWindowSetProject(QWidget, Ui_setProjectWindow):
 
 
         def setButtonActivePanel():
-            if self.set_project_main_tab.currentIndex() == 1:
-                setManualSettings()
-                print(" ")
-                print("Manual settings Selected")
-            elif self.set_project_main_tab.currentIndex() == 0:
-                setAutoSettings()
-                print(" ")
-                print("Auto Settings Selected")
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setWindowTitle("Set project: Last check")
+            msgBox.setText('You are changed some settings. Are you sure?')
+            msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+
+            retVal = msgBox.exec_()
+            if retVal == QMessageBox.Ok:
+                if self.set_project_main_tab.currentIndex() == 1:
+                    setManualSettings()
+                    print(" ")
+                    print("Manual settings Selected")
+                elif self.set_project_main_tab.currentIndex() == 0:
+                    setAutoSettings()
+                    print(" ")
+                    print("Auto Settings Selected")
+                else:
+                    print(" ")
+                    print("Nothing selected!")
+                print("OK")
+                self.close()
+
             else:
-                print(" ")
-                print("Nothing selected!")
-            
-                
-            
-            
-
-
+                print ("Nothing be changed from Set Project Window, Canceled.")
         self.pushButton.clicked.connect(setButtonActivePanel)
 
 def standalone(): #If start with standalone version
