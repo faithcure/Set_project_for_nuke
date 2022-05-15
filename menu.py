@@ -1,8 +1,7 @@
 import nuke
 import setWindowMainWindow
-import pixelfudger
 menu = nuke.menu("Nuke")
-fxphd = menu.addMenu("Fatih")
+fxphd = menu.addMenu("MenuName") #Menu name
 fxphd.addCommand("clip", "setWindowMainWindow.start()")
 
 nuke.menu( 'Nodes' ).addCommand( 'Luma/L_Fuse_v06', lambda: nuke.createNode( 'L_Fuse_v06.gizmo' ) )
